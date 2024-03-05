@@ -1,18 +1,13 @@
-export type news = {
-  creation: string;
-  title: string;
-  body: string;
-  image?: string;
-  author: string;
-};
+import { tag } from '@/utils/interpreter';
+import styles from './card.module.css';
 
-export function Card({ title, body, author, creation }: news) {
+export function Card({ id, title, author, creation, image }: tag) {
   return (
-    <div>
-      <h3>{title}</h3>
-      <p>{author}</p>
-      <p>{creation}</p>
-      <p>{body}</p>
-    </div>
+    <article key={id} className={styles.container}>
+      <div className={styles.containImage}>
+        <img className={styles.frontPage} src={image} alt="" />
+      </div>
+      <h3 className={styles.title}>{title}</h3>
+    </article>
   );
 }

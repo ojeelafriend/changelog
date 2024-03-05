@@ -1,0 +1,67 @@
+@font-face {
+  font-family: 'Whitney';
+  src: url('../../public/fonts/Whitney-700.woff');
+}
+
+@font-face {
+  font-family: 'Ginto';
+  src: url('../../public/fonts/Ginto-Nord-700.woff');
+}
+
+.body {
+  display: flex;
+  flex-flow: wrap column;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  max-width: 500px;
+}
+
+.backgroundHeader {
+  width: 100%;
+  height: 160px;
+  background-color: hsla(205.7142857142857, 9.09%, 15.1%, 1);
+}
+
+.containImage {
+  padding: 10px;
+  height: 100%;
+  overflow: hidden;
+  margin-top: -25%;
+}
+
+.containImage > img {
+  object-position: left center;
+  object-fit: cover; /* Ajusta la imagen dentro del contenedor sin recortar */
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.content {
+  display: grid;
+  margin-top: -12.5px;
+  padding: 0.4em;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 100%;
+}
+
+.content > h1 {
+  font-family: 'Ginto', sans-serif;
+  font-size: 27px;
+  margin-bottom: 0.5em;
+}
+
+.content > p {
+  font-family: 'Roboto';
+  line-height: 24px;
+}
+
+.content > h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 2px;
+}
