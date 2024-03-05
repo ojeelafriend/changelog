@@ -5,9 +5,9 @@ import { read, tag } from '../utils/interpreter';
 import Head from 'next/head';
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_GIT_URL}`, {
+  const response = await fetch(`${process.env.GIT_URL}`, {
     headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_GIT_TOKEN}`,
+      Authorization: `Bearer ${process.env.GIT_TOKEN}`,
     },
   });
   const items = await response.json();
@@ -21,9 +21,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_GIT_URL}/${params?.tag}`, {
+  const response = await fetch(`${process.env.GIT_URL}/${params?.tag}`, {
     headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_GIT_TOKEN}`,
+      Authorization: `Bearer ${process.env.GIT_TOKEN}`,
     },
   });
   const item = await response.json();

@@ -8,9 +8,9 @@ import styles from '@/styles/Home.module.css';
 import Link from 'next/link';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_GIT_URL}`, {
+  const response = await fetch(`${process.env.GIT_URL}`, {
     headers: {
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_GIT_TOKEN}`,
+      Authorization: `Bearer ${process.env.GIT_TOKEN}`,
     },
   });
 
